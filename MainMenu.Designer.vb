@@ -24,8 +24,8 @@ Partial Class MainMenu
     Private Sub InitializeComponent()
         Me.LauncherPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.AboutLauncher = New System.Windows.Forms.Button()
-        Me.Title = New System.Windows.Forms.Label()
         Me.BasiCalcLauncher = New System.Windows.Forms.Button()
+        Me.Title = New System.Windows.Forms.Label()
         Me.LauncherPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,7 +52,7 @@ Partial Class MainMenu
         Me.LauncherPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.LauncherPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.LauncherPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.LauncherPanel.Size = New System.Drawing.Size(510, 451)
+        Me.LauncherPanel.Size = New System.Drawing.Size(510, 351)
         Me.LauncherPanel.TabIndex = 0
         '
         'AboutLauncher
@@ -61,12 +61,25 @@ Partial Class MainMenu
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AboutLauncher.AutoSize = True
-        Me.AboutLauncher.Location = New System.Drawing.Point(411, 408)
+        Me.AboutLauncher.Location = New System.Drawing.Point(411, 318)
         Me.AboutLauncher.Name = "AboutLauncher"
-        Me.AboutLauncher.Size = New System.Drawing.Size(96, 40)
+        Me.AboutLauncher.Size = New System.Drawing.Size(96, 30)
         Me.AboutLauncher.TabIndex = 0
         Me.AboutLauncher.Text = "About"
         Me.AboutLauncher.UseVisualStyleBackColor = True
+        '
+        'BasiCalcLauncher
+        '
+        Me.BasiCalcLauncher.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BasiCalcLauncher.AutoSize = True
+        Me.BasiCalcLauncher.Location = New System.Drawing.Point(3, 3)
+        Me.BasiCalcLauncher.Name = "BasiCalcLauncher"
+        Me.BasiCalcLauncher.Size = New System.Drawing.Size(96, 29)
+        Me.BasiCalcLauncher.TabIndex = 1
+        Me.BasiCalcLauncher.Text = "Basic Calculator"
+        Me.BasiCalcLauncher.UseVisualStyleBackColor = True
         '
         'Title
         '
@@ -78,24 +91,11 @@ Partial Class MainMenu
         Me.Title.TabIndex = 1
         Me.Title.Text = "Main Menu"
         '
-        'BasiCalcLauncher
-        '
-        Me.BasiCalcLauncher.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BasiCalcLauncher.AutoSize = True
-        Me.BasiCalcLauncher.Location = New System.Drawing.Point(3, 3)
-        Me.BasiCalcLauncher.Name = "BasiCalcLauncher"
-        Me.BasiCalcLauncher.Size = New System.Drawing.Size(96, 39)
-        Me.BasiCalcLauncher.TabIndex = 1
-        Me.BasiCalcLauncher.Text = "Basic Calculator"
-        Me.BasiCalcLauncher.UseVisualStyleBackColor = True
-        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(534, 511)
+        Me.ClientSize = New System.Drawing.Size(534, 411)
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.LauncherPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
