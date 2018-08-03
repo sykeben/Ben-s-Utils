@@ -25,6 +25,7 @@ Partial Class MainMenu
         Me.LauncherPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.AboutLauncher = New System.Windows.Forms.Button()
         Me.Title = New System.Windows.Forms.Label()
+        Me.BasiCalcLauncher = New System.Windows.Forms.Button()
         Me.LauncherPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,6 +38,7 @@ Partial Class MainMenu
         Me.LauncherPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.LauncherPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.LauncherPanel.Controls.Add(Me.AboutLauncher, 4, 9)
+        Me.LauncherPanel.Controls.Add(Me.BasiCalcLauncher, 0, 0)
         Me.LauncherPanel.Location = New System.Drawing.Point(12, 48)
         Me.LauncherPanel.Name = "LauncherPanel"
         Me.LauncherPanel.RowCount = 10
@@ -76,6 +78,19 @@ Partial Class MainMenu
         Me.Title.TabIndex = 1
         Me.Title.Text = "Main Menu"
         '
+        'BasiCalcLauncher
+        '
+        Me.BasiCalcLauncher.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BasiCalcLauncher.AutoSize = True
+        Me.BasiCalcLauncher.Location = New System.Drawing.Point(3, 3)
+        Me.BasiCalcLauncher.Name = "BasiCalcLauncher"
+        Me.BasiCalcLauncher.Size = New System.Drawing.Size(96, 39)
+        Me.BasiCalcLauncher.TabIndex = 1
+        Me.BasiCalcLauncher.Text = "Basic Calculator"
+        Me.BasiCalcLauncher.UseVisualStyleBackColor = True
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -98,4 +113,5 @@ Partial Class MainMenu
     Friend WithEvents LauncherPanel As TableLayoutPanel
     Friend WithEvents Title As Label
     Friend WithEvents AboutLauncher As Button
+    Friend WithEvents BasiCalcLauncher As Button
 End Class
