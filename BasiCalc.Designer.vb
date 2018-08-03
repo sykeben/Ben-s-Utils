@@ -24,10 +24,10 @@ Partial Class BasiCalc
     Private Sub InitializeComponent()
         Me.Number1 = New System.Windows.Forms.NumericUpDown()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Add = New System.Windows.Forms.Button()
-        Me.Subtract = New System.Windows.Forms.Button()
-        Me.Multiply = New System.Windows.Forms.Button()
         Me.Divide = New System.Windows.Forms.Button()
+        Me.Multiply = New System.Windows.Forms.Button()
+        Me.Subtract = New System.Windows.Forms.Button()
+        Me.Add = New System.Windows.Forms.Button()
         Me.Number2 = New System.Windows.Forms.NumericUpDown()
         Me.Equals = New System.Windows.Forms.Label()
         Me.Number3 = New System.Windows.Forms.Label()
@@ -38,7 +38,11 @@ Partial Class BasiCalc
         '
         'Number1
         '
+        Me.Number1.AllowDrop = True
+        Me.Number1.DecimalPlaces = 3
         Me.Number1.Location = New System.Drawing.Point(13, 13)
+        Me.Number1.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.Number1.Minimum = New Decimal(New Integer() {2147483647, 0, 0, -2147483648})
         Me.Number1.Name = "Number1"
         Me.Number1.Size = New System.Drawing.Size(311, 20)
         Me.Number1.TabIndex = 0
@@ -61,33 +65,19 @@ Partial Class BasiCalc
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(311, 35)
         Me.TableLayoutPanel1.TabIndex = 1
         '
-        'Add
+        'Divide
         '
-        Me.Add.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Divide.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Add.AutoSize = True
-        Me.Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Add.Location = New System.Drawing.Point(3, 3)
-        Me.Add.Name = "Add"
-        Me.Add.Size = New System.Drawing.Size(71, 29)
-        Me.Add.TabIndex = 0
-        Me.Add.Text = "+"
-        Me.Add.UseVisualStyleBackColor = True
-        '
-        'Subtract
-        '
-        Me.Subtract.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Subtract.AutoSize = True
-        Me.Subtract.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Subtract.Location = New System.Drawing.Point(80, 3)
-        Me.Subtract.Name = "Subtract"
-        Me.Subtract.Size = New System.Drawing.Size(71, 29)
-        Me.Subtract.TabIndex = 2
-        Me.Subtract.Text = "-"
-        Me.Subtract.UseVisualStyleBackColor = True
+        Me.Divide.AutoSize = True
+        Me.Divide.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Divide.Location = New System.Drawing.Point(234, 3)
+        Me.Divide.Name = "Divide"
+        Me.Divide.Size = New System.Drawing.Size(74, 29)
+        Me.Divide.TabIndex = 3
+        Me.Divide.Text = "/"
+        Me.Divide.UseVisualStyleBackColor = True
         '
         'Multiply
         '
@@ -103,23 +93,40 @@ Partial Class BasiCalc
         Me.Multiply.Text = "x"
         Me.Multiply.UseVisualStyleBackColor = True
         '
-        'Divide
+        'Subtract
         '
-        Me.Divide.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Subtract.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Divide.AutoSize = True
-        Me.Divide.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Divide.Location = New System.Drawing.Point(234, 3)
-        Me.Divide.Name = "Divide"
-        Me.Divide.Size = New System.Drawing.Size(74, 29)
-        Me.Divide.TabIndex = 3
-        Me.Divide.Text = "/"
-        Me.Divide.UseVisualStyleBackColor = True
+        Me.Subtract.AutoSize = True
+        Me.Subtract.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Subtract.Location = New System.Drawing.Point(80, 3)
+        Me.Subtract.Name = "Subtract"
+        Me.Subtract.Size = New System.Drawing.Size(71, 29)
+        Me.Subtract.TabIndex = 2
+        Me.Subtract.Text = "-"
+        Me.Subtract.UseVisualStyleBackColor = True
+        '
+        'Add
+        '
+        Me.Add.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Add.AutoSize = True
+        Me.Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Add.Location = New System.Drawing.Point(3, 3)
+        Me.Add.Name = "Add"
+        Me.Add.Size = New System.Drawing.Size(71, 29)
+        Me.Add.TabIndex = 0
+        Me.Add.Text = "+"
+        Me.Add.UseVisualStyleBackColor = True
         '
         'Number2
         '
+        Me.Number2.DecimalPlaces = 3
         Me.Number2.Location = New System.Drawing.Point(13, 80)
+        Me.Number2.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.Number2.Minimum = New Decimal(New Integer() {2147483647, 0, 0, -2147483648})
         Me.Number2.Name = "Number2"
         Me.Number2.Size = New System.Drawing.Size(311, 20)
         Me.Number2.TabIndex = 2
