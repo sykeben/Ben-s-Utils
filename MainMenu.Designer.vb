@@ -83,6 +83,7 @@ Partial Class MainMenu
         Me.ClientSize = New System.Drawing.Size(534, 511)
         Me.Controls.Add(Me.Title)
         Me.Controls.Add(Me.LauncherPanel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "MainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
